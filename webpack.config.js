@@ -1,7 +1,7 @@
 const path = require('path')
 // const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
-    mode: 'production',
+    mode: 'development',
     entry: {
         index: './lib/index.tsx'
     },
@@ -9,6 +9,9 @@ module.exports = {
         path: path.resolve(__dirname, 'dist/lib'),
         library: 'FUI',
         libraryTarget: 'umd',
+    },
+    resolve: {
+        extensions: ['.ts', '.tsx', '.js', '.jsx']
     },
     module: {
         rules: [
